@@ -1,0 +1,147 @@
+<%- include("partials/header") -%>
+
+  <div class="container">
+    <h1 class="display-4 mt-4 mb-3">
+      <small class="text-body-secondary">Welcome to</small>
+      F1 PitStop
+    </h1>
+    <hr class="border border-info border-2 opacity-50 mb-5">
+
+    <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic fw-bold mb-2">Revvin' Up: F1 News & Results</h1>
+          <p class="lead my-3 mt-4">Get your daily dose of F1 action with F1 PitStop, providing the latest news,
+            results,
+            and championship updates at your fingertips.</p>
+          <p class="lead mb-0 mt-4"><a href="/calendar" class="text-white fw-bold">Race Calendar...</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- news -->
+    <div class="row mb-2">
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Austrain GP</strong>
+            <h3 class="mb-0">Max Dominates</h3>
+            <div class="mb-1 text-body-secondary">July 02</div>
+            <p class="mb-auto">Max Verstappen's recent triumph at the Austrian Grand Prix showcased his exceptional
+              dominance, marking his fifth consecutive victory in Formula 1, leads championship.</p>
+            <a href="/standing" class="stretched-link mt-2">Continue reading</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-warning">McLaren</strong>
+            <h3 class="mb-0">McLaren Chrome Livery</h3>
+            <div class="mb-1 text-body-secondary">July 05</div>
+            <p class="mb-auto">The chrome livery follows McLaren's previous special liveries this season, such as the
+              'Triple Crown' design that they ran in Monaco and Spain earlier this year.
+            </p>
+            <a href="/calendar/British%20Grand%20Prix%2010" class="stretched-link mt-2">Continue reading</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">Williams Racing</strong>
+            <h3 class="mb-0">British Grand Prix</h3>
+            <div class="mb-1 text-body-secondary">July 07</div>
+            <p class="card-text mb-auto">Williams surprised their rivals with an impressive performance during Friday's
+              practice sessions for the British Grand Prix, raising the possibility of a threat at Silverstone.</p>
+            <a href="/calendar/British%20Grand%20Prix%2010" class="stretched-link mt-2">Continue reading</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h2 class="mt-4 text-primary">Next Race</h2>
+    <!-- <hr class="border border-secondary border-3 dotted  "> -->
+
+    <div class="container-fluid">
+      <section class="mt-4">
+
+
+        <div class="row mb-3">
+          <div
+            class="card mb-3 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative text-bg-dark col-md-6"
+            style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/british.avif" class="img-fluid rounded-start mt-5" alt="..."
+                  style="background-color: azure;">
+              </div>
+              <div class=" col-md-8">
+                <div class="card-body">
+                  <strong class="d-inline-block mb-2 text-info">#RaceWeekend</strong>
+
+                  <h5 class="card-title">
+                    <h3 class="text-warning"> Great Britain Grand Prix </h3>
+                  </h5>
+                  <div class="spinner-grow text-success spinner-sm" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <p class="card-text">
+                  <h6> 07 - 09 July </h6>
+                  </p>
+                  <p class="card-text lead">Round 11 - FORMULA 1 ARAMCO BRITISH GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/British%20Grand%20Prix%2010" style="color: aqua;">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+          <div
+            class="card mb-3 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative text-bg-light col-md-6"
+            style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/hungary.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <strong class="d-inline-block mb-2 text-dark">Upcoming</strong>
+
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Hungary Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 21 - 23 July </h6>
+                  </p>
+                  <p class="card-text lead">Round 12 - FORMULA 1 QATAR AIRWAYS HUNGARIAN GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Hungary%20Grand%20Prix%2011">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="9"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </section>
+    </div>
+
+  </div>
+
+  <%- include("partials/footer") -%>

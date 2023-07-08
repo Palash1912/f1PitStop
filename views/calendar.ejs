@@ -1,0 +1,416 @@
+<%- include("partials/header") -%>
+
+  <div class="container">
+
+    <h1 class="display-4 mt-4 mb-4  ">
+      Upcoming Races
+    </h1>
+    <hr class="border border-success border-2 opacity-50 mb-5">
+
+    <div class="container-fluid">
+      <section class="mt-4">
+
+
+        <!-- third row -->
+
+        <div class="row mb-3">
+          <div class="card text-bg-dark border-light mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/british.avif" class="img-fluid rounded-start mt-5" alt="..."
+                  style="background-color: azure;">
+              </div>
+              <div class=" col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-warning"> Great Britain Grand Prix </h3>
+                  </h5>
+                  <div class="spinner-grow text-success spinner-sm" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                  <p class="card-text">
+                  <h6> 07 - 09 July </h6>
+                  </p>
+                  <p class="card-text lead">Round 11 - FORMULA 1 ARAMCO BRITISH GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/British%20Grand%20Prix%2010" style="color: aqua;">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/hungary.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Hungary Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 21 - 23 July </h6>
+                  </p>
+                  <p class="card-text lead">Round 12 - FORMULA 1 QATAR AIRWAYS HUNGARIAN GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Hungary%20Grand%20Prix%2011">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="9"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- fourth row -->
+
+        <div class="row mb-3">
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/belgium.avif" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Belgium Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 28 - 30 July </h6>
+                  </p>
+                  <p class="card-text lead">Round 13 - FORMULA 1 MSC CRUISES BELGIAN GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Belgium%20Grand%20Prix%2012">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/netherlands.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Netherlands Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 25 - 27 August </h6>
+                  </p>
+                  <p class="card-text lead">Round 14 - FORMULA 1 HEINEKEN DUTCH GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Netherlands%20Grand%20Prix%2013">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="9"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- fifth row -->
+
+        <div class="row mb-3">
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/italy.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Italy Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 01 - 03 September </h6>
+                  </p>
+                  <p class="card-text lead">Round 15 - FORMULA 1 PIRELLI GRAN PREMIO D’ITALIA 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Italy%20Grand%20Prix%2014">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/singapore.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Singapore Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 15 - 16 September </h6>
+                  </p>
+                  <p class="card-text lead">Round 16 - FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Singapore%20Grand%20Prix%2015">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="9"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- sixth row -->
+
+        <div class="row mb-3">
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/japan.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Japan Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 22 - 24 September </h6>
+                  </p>
+                  <p class="card-text lead">Round 17 - FORMULA 1 LENOVO JAPANESE GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Japan%20Grand%20Prix%2016">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/qatar.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Qatar Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 06 - 08 October </h6>
+                  </p>
+                  <p class="card-text lead">Round 18 - FORMULA 1 QATAR AIRWAYS QATAR GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Qatar%20Grand%20Prix%2017">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="9"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- seventh row -->
+
+        <div class="row mb-3">
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/us.png" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> United States Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 20 - 22 October </h6>
+                  </p>
+                  <p class="card-text lead">Round 19 - FORMULA 1 LENOVO UNITED STATES GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/United%20States%20Grand%20Prix%2018">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/mexico.avif" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Mexico Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 27 - 29 October </h6>
+                  </p>
+                  <p class="card-text lead">Round 20 - FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Mexico%20Grand%20Prix%2019">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="9"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- eight row -->
+
+        <div class="row mb-3">
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/brazil.avif" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Brazil Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 03 - 05 November </h6>
+                  </p>
+                  <p class="card-text lead">Round 21 - FORMULA 1 ROLEX GRANDE PRÊMIO DE SÃO PAULO 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Brazil%20Grand%20Prix%2020">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/vegas.avif" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Las Vegas Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 16 - 18 November </h6>
+                  </p>
+                  <p class="card-text lead">Round 22 - FORMULA 1 GRAN PREMIO DE LA CIUDAD DE MÉXICO 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Las%20Vegas%20Grand%20Prix%2021">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="9"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- eight row -->
+
+        <div class="row mb-3">
+          <div class="card text-bg-light border-info mb-3 col-md-6" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/abudhabi.avif" class="img-fluid rounded-start mt-5" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <h3 class="text-danger"> Abu Dhabi Grand Prix </h3>
+                  </h5>
+                  <p class="card-text">
+                  <h6> 24 - 26 November </h6>
+                  </p>
+                  <p class="card-text lead">Round 23 - FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2023</p>
+                  <p class="card-text mt-2"><small class="text-body-secondary">
+                      <form action="/calendar/:race" method="post">
+                        <a href="/calendar/Abu%20Dhabi%20Grand%20Prix%2022">
+                          Read More
+                        </a>
+                        <input type="hidden" name="round" value="8"></input>
+                      </form>
+                    </small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          &emsp14;&emsp14;&emsp14;&emsp14;
+
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <%- include("partials/footer") -%>

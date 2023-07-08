@@ -1,0 +1,124 @@
+<%- include("partials/header") -%>
+
+  <!-- <div class="container">
+
+    <h1 class="display-4 mt-4 mb-5">
+        <small class="text-body-secondary">Check out</small>
+        2023 F1 Constructor 
+        <small class="text-body-secondary">Standing</small>
+    </h1>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead>
+              <tr class="table-striped border">
+                <th scope="col">Standing</th>
+                <th scope="col">Team</th>
+                <th scope="col">Points</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr class="table-primary">
+                <th scope="row">1</th>
+                <td>Red Bull Racing</td>
+                <td>224</td>
+              </tr>
+              <tr class="table-success">
+                <th scope="row">2</th>
+                <td>Aston Martin</td>
+                <td>102</td>
+              </tr>
+              <tr class="table-info">
+                <th scope="row">3</th>
+                <td>Mercedes</td>
+                <td>96</td>
+              </tr>
+              <tr class="table-danger">
+                <th scope="row">4</th>
+                <td>Ferrari</td>
+                <td>78</td>
+              </tr>
+              <tr class="table-warning"> 
+                <th scope="row">5</th>
+                <td>McLaren</td>
+                <td>14</td>
+              </tr>
+              <tr class="table-primary">
+                <th scope="row">6</th>
+                <td>Alpine</td>
+                <td>14</td>
+              </tr>
+              <tr class="table-secondary">
+                <th scope="row">7</th>
+                <td>Haas F1 Team</td>
+                <td>8</td>
+              </tr>
+              <tr class="table-danger">
+                <th scope="row">8</th>
+                <td>Alfa Romeo</td>
+                <td>6</td>
+              </tr>
+              <tr class="table-light">
+                <th scope="row">9</th>
+                <td>AlphaTauri</td>
+                <td>2</td>
+              </tr>
+              <tr class="table-dark">
+                <th scope="row">10</th>
+                <td>Williams</td>
+                <td>1</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          
+          <button type="button" class="btn btn-primary mt-3 mb-5">
+            <a href="/standing" style="text-decoration: none; color: white;"> Head Back </a>
+        </button>
+    </div>
+</div> -->
+
+  <div class="container">
+
+    <h1 class="display-4 mt-4 mb-5">
+      <small class="text-body-secondary">Check out</small>
+      2023 F1 Constructors
+      <small class="text-body-secondary">Standing</small>
+      <hr class="border border-danger border-2 opacity-50">
+    </h1>
+
+    <div class="table-responsive">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Team</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+
+        <tbody class="table-group-divider">
+          <% standings.forEach(driver=> { %>
+            <tr>
+              <th scope="row">
+                <%= driver.position %>
+              </th>
+              <td>
+                <%= driver.Constructor.name %>
+              </td>
+              <td>
+                <%= driver.points %>
+              </td>
+            </tr>
+            <% }) %>
+        </tbody>
+
+      </table>
+    </div>
+
+    <button type="button" class="btn btn-primary mt-3 mb-5">
+      <a href="/standing" style="text-decoration: none; color: white;"> Head Back </a>
+    </button>
+  </div>
+
+  <%- include("partials/footer") -%>

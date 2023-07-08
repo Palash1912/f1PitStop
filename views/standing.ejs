@@ -1,0 +1,70 @@
+<%- include("partials/header") -%>
+
+  <div class="container">
+    <h1 class="display-4 mt-4 mb-3">
+      <small class="text-body-secondary">Check out</small>
+      Latest Standings
+    </h1>
+    <p>
+      Welcome to the F1 2023 Standings section, your go-to destination for tracking the thrilling Driver and Constructor
+      Championships of the Formula 1 season. Stay updated on the latest rankings as the world's top drivers battle it
+      out for supremacy on the track. Discover who is leading the pack, who is climbing up the ranks, and who is facing
+      the intense challenge of the competition. In addition to the Driver Championship, we bring you the Constructor
+      Championship standings, showcasing the collective performance of the teams throughout the season. Witness the
+      fierce rivalry between the constructors as they strive for excellence and fight for the prestigious title. Join us
+      as we delve into the numbers, analyze the points, and unravel the story behind the standings in this captivating
+      journey of speed, skill, and determination.
+    </p>
+
+    <section class="mt-5">
+      <div class="row">
+        <div class="card mb-3 col-md-6" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="images/driver.jfif" class="img-fluid rounded-start mt-2" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Driver's Championship</h5>
+                <p class="card-text">Click here to know about your favourite driver ranking in the current Championship.
+                </p>
+                <form action="/driverStanding" method="post">
+                  <button class="btn btn-primary" type="submit">
+                    Check
+                  </button>
+                </form>
+                <p class="card-text mt-2"><small class="text-body-secondary">Last updated July 02</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        &emsp14;&emsp14;&emsp14;&emsp14;
+
+        <div class="card mb-3 col-md-6 card2" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="images/constructor.png" class="img-fluid rounded-start mt-2" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Constructor's Championship</h5>
+                <p class="card-text">Click here to know about your favourite team ranking in the current Championship.
+                </p>
+                <form action="/constructorStanding" method="post">
+                  <button class="btn btn-primary" type="submit">
+                    Check
+                  </button>
+                </form>
+                <p class="card-text mt-2"><small class="text-body-secondary">Last updated July 02</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+
+  <%- include("partials/footer") -%>

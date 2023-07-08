@@ -1,0 +1,133 @@
+<%- include("partials/header") -%>
+
+  <div class="container">
+
+    <!-- <h1 class="display-4 mt-4 mb-3">
+        <small class="text-body-secondary">Welcome to</small>
+        <%= race.raceName %>
+    </h1> -->
+
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-4 mt-4 mb-3 fw-bold">
+          <small class="text-body-secondary">Welcome to</small>
+          <%= race.raceName %>
+        </h1>
+
+        <hr class="border border-primary border-2 opacity-50">
+        <img class="img-fluid mt-3 mb-3" src="/images/<%=race.round%>.png" alt="">
+        <br>
+      </div>
+      <div class="card col-lg-6 col-md-12 col-sm-12">
+        <div class="card-body " style="max-width: 540px;">
+          <h1 class="display-6 fw-bold  ">Circuit Info</h1>
+          <p class="col-md-8 fs-5 mt-3">
+            <%= race.Circuit.circuitName %>
+          </p>
+          <p class="col-md-8 fs-5 mt-3">
+            <%= race.Circuit.Location.locality %>, <%= race.Circuit.Location.country %>
+          </p> <br>
+          <hr class="border border-danger border-2 opacity-50">
+          <h5 class="card-title display-6 fw-bold">Schedule</h5>
+          <br>
+
+          <% if(race.round !=="9" && race.round !=="4" && race.round !=="12" && race.round !=="17" && race.round !=="18"
+            && race.round !=="20" ){ %>
+            <p class="card-text"><b> FP1: </b>
+              <% const fp1DateTime=new Date(race.FirstPractice.date + 'T' + race.FirstPractice.time); const
+                fp1IST=fp1DateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                fp1ISTDate=fp1IST.split(',')[0]; const [month1, day1, year1]=fp1ISTDate.split('/'); const
+                fp1ISTFormattedDate=`${day1}/${month1}/${year1}`; const fp1ISTTime=fp1IST.split(',')[1].trim(); %>
+                <%= fp1ISTFormattedDate %>, <%= fp1ISTTime %>
+            </p>
+            <p class="card-text"><b> FP2: </b>
+              <% const fp2DateTime=new Date(race.SecondPractice.date + 'T' + race.SecondPractice.time); const
+                fp2IST=fp2DateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                fp2ISTDate=fp2IST.split(',')[0]; const [month2, day2, year2]=fp2ISTDate.split('/'); const
+                fp2ISTFormattedDate=`${day2}/${month2}/${year2}`; const fp2ISTTime=fp2IST.split(',')[1].trim(); %>
+                <%= fp2ISTFormattedDate %>, <%= fp2ISTTime %>
+            </p>
+            <p class="card-text"><b> FP3: </b>
+              <% const fp3DateTime=new Date(race.ThirdPractice.date + 'T' + race.ThirdPractice.time); const
+                fp3IST=fp3DateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                fp3ISTDate=fp3IST.split(',')[0]; const [month3, day3, year3]=fp3ISTDate.split('/'); const
+                fp3ISTFormattedDate=`${day3}/${month3}/${year3}`; const fp3ISTTime=fp3IST.split(',')[1].trim(); %>
+                <%= fp3ISTFormattedDate %>, <%= fp3ISTTime %>
+            </p>
+            <p class="card-text"><b> Qualifying:</b>
+              <% const qualifyingDateTime=new Date(race.Qualifying.date + 'T' + race.Qualifying.time); const
+                qualifyingIST=qualifyingDateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                qualifyingISTDate=qualifyingIST.split(',')[0]; const [month4, day4, year4]=qualifyingISTDate.split('/');
+                const qualifyingISTFormattedDate=`${day4}/${month4}/${year4}`; const
+                qualifyingISTTime=qualifyingIST.split(',')[1].trim(); %>
+                <%= qualifyingISTFormattedDate %>, <%= qualifyingISTTime %>
+            </p>
+            <p class="card-text"><b> Race:</b>
+              <% const raceDateTime=new Date(race.date + 'T' + race.time); const
+                raceIST=raceDateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                raceISTDate=raceIST.split(',')[0]; const [month5, day5, year5]=raceISTDate.split('/'); const
+                raceISTFormattedDate=`${day5}/${month5}/${year5}`; const raceISTTime=raceIST.split(',')[1].trim(); %>
+                <%= raceISTFormattedDate %>, <%= raceISTTime %>
+            </p>
+            <p class="card-text mt-2"><small class="text-body-secondary">Times Displayed are in IST (Indian Standard
+                Time).</small></p>
+
+
+            <% }else{ %>
+              <p class="card-text"><b> FP1: </b>
+                <% const fp1DateTime=new Date(race.FirstPractice.date + 'T' + race.FirstPractice.time); const
+                  fp1IST=fp1DateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                  fp1ISTDate=fp1IST.split(',')[0]; const [month1, day1, year1]=fp1ISTDate.split('/'); const
+                  fp1ISTFormattedDate=`${day1}/${month1}/${year1}`; const fp1ISTTime=fp1IST.split(',')[1].trim(); %>
+                  <%= fp1ISTFormattedDate %>, <%= fp1ISTTime %>
+              </p>
+              <p class="card-text"><b> Qualifying:</b>
+                <% const qualifyingDateTime=new Date(race.Qualifying.date + 'T' + race.Qualifying.time); const
+                  qualifyingIST=qualifyingDateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                  qualifyingISTDate=qualifyingIST.split(',')[0]; const [month2, day2,
+                  year2]=qualifyingISTDate.split('/'); const qualifyingISTFormattedDate=`${day2}/${month2}/${year2}`;
+                  const qualifyingISTTime=qualifyingIST.split(',')[1].trim(); %>
+                  <%= qualifyingISTFormattedDate %>, <%= qualifyingISTTime %>
+              </p>
+              <p class="card-text"><b> FP2: </b>
+                <% const fp2DateTime=new Date(race.SecondPractice.date + 'T' + race.SecondPractice.time); const
+                  fp2IST=fp2DateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                  fp2ISTDate=fp2IST.split(',')[0]; const [month3, day3, year3]=fp2ISTDate.split('/'); const
+                  fp2ISTFormattedDate=`${day3}/${month3}/${year3}`; const fp2ISTTime=fp2IST.split(',')[1].trim(); %>
+                  <%= fp2ISTFormattedDate %>, <%= fp2ISTTime %>
+              </p>
+              <p class="card-text"><b> Sprint: </b>
+                <% const sprintDateTime=new Date(race.Sprint.date + 'T' + race.Sprint.time); const
+                  sprintIST=sprintDateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                  sprintISTDate=sprintIST.split(',')[0]; const [month, day, year]=sprintISTDate.split('/'); const
+                  sprintISTFormattedDate=`${day}/${month}/${year}`; const sprintISTTime=sprintIST.split(',')[1].trim();
+                  %>
+                  <%= sprintISTFormattedDate %>, <%= sprintISTTime %>
+              </p>
+              <p class="card-text"><b> Race:</b>
+                <% const raceDateTime=new Date(race.date + 'T' + race.time); const
+                  raceIST=raceDateTime.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }); const
+                  raceISTDate=raceIST.split(',')[0]; const [month4, day4, year4]=raceISTDate.split('/'); const
+                  raceISTFormattedDate=`${day4}/${month4}/${year4}`; const raceISTTime=raceIST.split(',')[1].trim(); %>
+                  <%= raceISTFormattedDate %>, <%= raceISTTime %>
+              </p>
+              <p class="card-text mt-2"><small class="text-body-secondary">Times Displayed are in IST (Indian Standard
+                  Time).</small></p>
+
+
+              <% } %>
+
+                <button button type="button" class="btn btn-secondary  mt-4 me-2"><a href="/results"
+                    style="text-decoration: none; color: aliceblue;">Back</a></button>
+                <button button type="button" class="btn btn-success  mt-4 me-2"><a href="/finished/<%= race.round %>"
+                    style="text-decoration: none; color: aliceblue;">Race Result</a></button>
+                <button button type="button" class="btn btn-primary  mt-4"><a href="<%= race.Circuit.url %>"
+                    style="text-decoration: none; color: aliceblue;">More Info</a></button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <%- include("partials/footer") -%>
