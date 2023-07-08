@@ -157,7 +157,7 @@ app.get("/calendar", function (req, res) {
   res.render("calendar");
 });
 
-// app.listen
-app.listen(3000, function () {
-  console.log("server is up and running");
+// port 3000
+app.listen(process.env.PORT || 3000, function () {
+  console.log("server up and running");
 });
