@@ -5,3 +5,8 @@ I used **Ergast F1 API** to get latest F1 results. Stay ahead of the game with o
 
 
 ![image](https://github.com/Palash1912/f1PitStop/assets/90755286/6d507d77-81a1-4c68-ada4-8aebb0b83704)
+![image](https://github.com/Palash1912/f1PitStop/assets/90755286/bb7219b7-b8d3-4850-a772-6c09e2adf621)
+
+
+If you like the site, do contribute :)
+![image](https://github.com/Palash1912/f1PitStop/assets/90755286/cb9e1383-ae88-4f9c-9042-1ebe329457c7)
