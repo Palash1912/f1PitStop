@@ -1,75 +1,68 @@
 <%- include("partials/header") -%>
 
-  <div class="container">
-    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-      <div class="container-fluid py-5">
-        <h1 class="display-4 mt-4 mb-3 fw-bold">
-          <small class="text-body-secondary">2023</small>
-          <%= standings.raceName %>
-            <small class="text-body-secondary">Race Result</small>
-        </h1>
-        <hr class="border border-primary border-2 opacity-50" />
-        <!-- <img class="img-fluid mt-3 mb-3" src="/images/<%=standings.round%>.png" alt="" > -->
-      </div>
-
-      <div class="table-responsive">
-        <table class="table table-hover table-striped">
-          <thead>
-            <tr>
-              <th>Position</th>
-              <th>Driver</th>
-              <th>Constructor</th>
-              <th>Laps</th>
-              <th>Time</th>
-              <th>Points</th>
-            </tr>
-          </thead>
-
-          <tbody class="table-group-divider">
-            <% standings.Results.forEach(driver=> { %>
-              <tr>
-                <th scope="row">
-                  <%= driver.position %>
-                </th>
-                <td>
-                  <%= driver.Driver.givenName %>
-                    <%= driver.Driver.familyName %>
-                </td>
-                <td>
-                  <%= driver.Constructor.name %>
-                </td>
-                <td>
-                  <%= driver.laps %>
-                </td>
-
-                <% if(driver.status==="Finished" ){ %>
-                  <td>
-                    <%= driver.Time.time %>
-                  </td>
-                  <% }else if(driver.status==="+1 Lap" || driver.status==="+2 Lap" ){ %>
-                    <td>
-                      <%= driver.status %>
-                    </td>
-                    <% }else{ %>
-                      <td>DNF</td>
-                      <% } %>
-
-                        <td>
-                          <%= driver.points %>
-                        </td>
-              </tr>
-              <% }) %>
-          </tbody>
-        </table>
-      </div>
-      <button button type="button" class="btn btn-dark mt-4 me-3">
-        <a href="/results" style="text-decoration: none; color: aliceblue">Back</a>
-      </button>
-      <button button type="button" class="btn btn-primary mt-4">
-        <a href="/results/<%=standings.raceName%><%=standings.round%>"
-          style="text-decoration: none; color: aliceblue">Circuit Info</a>
-      </button>
+<div class="container">
+  <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-4 mt-4 mb-3 fw-bold">
+        <small class="text-body-secondary">2023</small>
+        <%= standings.raceName %>
+        <small class="text-body-secondary">Race Result</small>
+      </h1>
+      <hr class="border border-primary border-2 opacity-50" />
+      <!-- <img class="img-fluid mt-3 mb-3" src="/images/<%=standings.round%>.png" alt="" > -->
     </div>
-  </div>
 
-  <%- include("partials/footer") -%>
+    <div class="table-responsive">
+      <table class="table table-hover table-striped">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Driver</th>
+            <th>Constructor</th>
+            <th>Laps</th>
+            <th>Time</th>
+            <th>Points</th>
+          </tr>
+        </thead>
+
+        <tbody class="table-group-divider">
+          <% standings.Results.forEach(driver=> { %>
+          <tr>
+            <th scope="row"><%= driver.position %></th>
+            <td>
+              <%= driver.Driver.givenName %> <%= driver.Driver.familyName %>
+            </td>
+            <td><%= driver.Constructor.name %></td>
+            <td><%= driver.laps %></td>
+
+            <% if(driver.status==="Finished" ){ %>
+            <td><%= driver.Time.time %></td>
+            <% }else if(driver.status==="+1 Lap" || driver.status==="+2 Lap" ){
+            %>
+            <td><%= driver.status %></td>
+            <% }else{ %>
+            <td>DNF</td>
+            <% } %>
+
+            <td><%= driver.points %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+    <button button type="button" class="btn btn-dark mt-4 me-3">
+      <a href="/results" style="text-decoration: none; color: aliceblue"
+        >Back</a
+      >
+    </button>
+    <button button type="button" class="btn btn-primary mt-4">
+      <a
+        href="/results/<%=standings.raceName%><%=standings.round%>"
+        style="text-decoration: none; color: aliceblue"
+        >Circuit Info</a
+      >
+    </button>
+  </div>
+</div>
+
+<%- include("partials/footer") -%>
